@@ -3,6 +3,7 @@ import { Container } from "aurelia-dependency-injection";
 import { StageComponent } from "aurelia-testing";
 import { bootstrap } from "aurelia-bootstrapper";
 import { Aurelia } from 'aurelia-framework';
+import {PLATFORM} from 'aurelia-pal';
 
 let component;
 let viewModel: App;
@@ -26,7 +27,7 @@ describe('the app', () => {
     component.bootstrap(aurelia => {
         aurelia.use
             .standardConfiguration()
-            .plugin("aurelia-kendoui-bridge");
+            .plugin(PLATFORM.moduleName("aurelia-kendoui-bridge"));
     });
 
     component.create(bootstrap).then(() => {
