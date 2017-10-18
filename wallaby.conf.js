@@ -1,4 +1,7 @@
 var wallabyWebpack = require('wallaby-webpack');
+var AureliaPlugin = require('aurelia-webpack-plugin').AureliaPlugin;
+var DefinePlugin = require('webpack').DefinePlugin;
+
 var wallabyPostprocessor = wallabyWebpack({
   entryPatterns: ['test/unit/setup.js', 'test/unit/**/*.spec.js'],
   resolve: {
@@ -6,7 +9,13 @@ var wallabyPostprocessor = wallabyWebpack({
       'kendo-ui/js': '@progress/kendo-ui/js',
       'kendo-ui': '@progress/kendo-ui/js/kendo.core.js'
     }
-  }
+  },
+  plugins: [
+    new DefinePlugin({AURELIA_WEBPACK_2_0: undefined}),
+    new AureliaPlugin({
+      aureliaApp: undefined
+    })
+  ]
 });
 
 module.exports = function () {
