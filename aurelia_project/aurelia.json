@@ -136,10 +136,17 @@
           },
           {
             "name": "kendo-ui",
+<<<<<<< HEAD
             "path": "../node_modules/kendo-ui-core",
             "main": "js/kendo.core.js",
             "resources": [
               "css/web/kendo.common-bootstrap.core.min.css",
+=======
+            "path": "../node_modules/@progress/kendo-ui/",
+            "main": "js/kendo.core.js",
+            "resources": [
+              "css/web/kendo.common-bootstrap.min.css",
+>>>>>>> upstream/master
               "css/web/kendo.bootstrap.min.css",
               "css/web/kendo.bootstrap.mobile.min.css"
             ]

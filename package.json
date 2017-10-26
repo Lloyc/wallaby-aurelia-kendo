@@ -8,6 +8,7 @@
   },
   "license": "MIT",
   "dependencies": {
+
     "@types/kendo-ui": "^2017.1.7",
     "aurelia-animator-css": "^1.0.0",
     "aurelia-bootstrapper": "^2.1.1",
