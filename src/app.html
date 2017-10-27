@@ -2,7 +2,7 @@
     <require from="aurelia-kendoui-bridge/button/button"></require>
     <require from="aurelia-kendoui-bridge/notification/notification"></require>
     <div id="errorDisplay" class="alert">
-        <ak-notification id="staticNotification" k-append-to="#errorDisplay" k-button.bind="true" k-hide-on-click.bind="false" k-auto-hide-after="0"
+        <ak-notification id="staticNotification" ref="staticNotification" k-append-to="#errorDisplay" k-button.bind="true" k-hide-on-click.bind="false" k-auto-hide-after="0"
             k-widget.bind="staticNotification">
         </ak-notification>
     </div>
